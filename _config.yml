@@ -1,0 +1,11 @@
+# GitHub Pages（Jekyll）の設定。
+# 下の3つはページ内で {{ site.xxx }} として参照しているので、ここを変えれば全ページに反映される。
+title: Fitness サポート
+app_name: Fitness
+# TODO: 公開する開発者名（本名またはハンドルネーム）に置き換える
+developer: 開発者名
+# TODO: Googleフォームの共有URLに置き換える
+contact_form_url: https://forms.gle/XXXXXXXXXXXX
+
+lang: ja
+theme: jekyll-theme-minimal
