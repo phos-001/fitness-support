@@ -2,10 +2,8 @@
 # 下の3つはページ内で {{ site.xxx }} として参照しているので、ここを変えれば全ページに反映される。
 title: Fitness サポート
 app_name: Fitness
-# TODO: 公開する開発者名（本名またはハンドルネーム）に置き換える
-developer: 開発者名
-# TODO: Googleフォームの共有URLに置き換える
-contact_form_url: https://forms.gle/XXXXXXXXXXXX
+developer: phos-001
+contact_form_url: https://docs.google.com/forms/d/e/1FAIpQLSeshDVN-Wa6a8PRzWs-yUAAB4ucyEf7zIXRFGAqAwpudQuQCQ/viewform
 
 lang: ja
 theme: jekyll-theme-minimal
