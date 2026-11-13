@@ -16,9 +16,10 @@
     <div class="wrapper">
       <header>
         <h1><a href="{{ '/' | relative_url }}">{{ site.app_name }}</a></h1>
+        {% comment %}今開いているページはリンクにせず太字にし、どのページにいるかがわかるようにする{% endcomment %}
         <p>
-          <a href="{{ '/support/' | relative_url }}">サポート・お問い合わせ</a><br>
-          <a href="{{ '/privacy/' | relative_url }}">プライバシーポリシー</a>
+          {% if page.url == '/support/' %}<strong>サポート・お問い合わせ</strong>{% else %}<a href="{{ '/support/' | relative_url }}">サポート・お問い合わせ</a>{% endif %}<br>
+          {% if page.url == '/privacy/' %}<strong>プライバシーポリシー</strong>{% else %}<a href="{{ '/privacy/' | relative_url }}">プライバシーポリシー</a>{% endif %}
         </p>
       </header>
       <section>
