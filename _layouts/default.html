@@ -1,0 +1,29 @@
+{% comment %}
+  テーマ（jekyll-theme-minimal）の標準のレイアウトは、ページの横に開発者のアカウント名や
+  「Hosted on GitHub Pages」「View the Project on GitHub」を表示するため、それらを出さないレイアウトに置き換える。
+  見た目はテーマのスタイルシートをそのまま使う。このコメントは公開されるページには出力されない
+{% endcomment %}
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'ja' }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ '/' | relative_url }}">{{ site.app_name }}</a></h1>
+        <p>
+          <a href="{{ '/support/' | relative_url }}">サポート・お問い合わせ</a><br>
+          <a href="{{ '/privacy/' | relative_url }}">プライバシーポリシー</a>
+        </p>
+      </header>
+      <section>
+        {{ content }}
+      </section>
+    </div>
+  </body>
+</html>
