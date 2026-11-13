@@ -1,8 +1,14 @@
 # GitHub Pages（Jekyll）の設定。
-# 下の2つとtitleはページ内で {{ site.xxx }} として参照しているので、ここを変えれば全ページに反映される。
-title: liftlog サポート
+# 下の2つはページ内で {{ site.xxx }} として参照しているので、ここを変えれば全ページに反映される。
 app_name: liftlog
 contact_form_url: https://docs.google.com/forms/d/e/1FAIpQLSeshDVN-Wa6a8PRzWs-yUAAB4ucyEf7zIXRFGAqAwpudQuQCQ/viewform
 
 lang: ja
-theme: jekyll-theme-minimal
+# 見た目はテーマを使わず、_layouts/default.html と assets/css/site.css で決めている
+
+# すべてのページを _layouts/default.html で表示する
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
