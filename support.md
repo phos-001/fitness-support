@@ -5,7 +5,7 @@ permalink: /support/
 
 # サポート
 
-<p class="section-header">お問い合わせ</p>
+<h2 class="section-header">お問い合わせ</h2>
 
 <div class="card" markdown="1">
 
@@ -25,7 +25,7 @@ permalink: /support/
 
 </div>
 
-<p class="section-header">よくある質問</p>
+<h2 class="section-header">よくある質問</h2>
 
 <div class="card faq">
 
