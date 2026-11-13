@@ -5,8 +5,6 @@ permalink: /support/
 
 # サポート
 
-{{ site.app_name }} をご利用いただきありがとうございます。
-
 ## お問い合わせ
 
 不具合のご報告やご要望は、[お問い合わせフォーム]({{ site.contact_form_url }})からお送りください。
