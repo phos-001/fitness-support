@@ -1,7 +1,7 @@
 # GitHub Pages（Jekyll）の設定。
 # 下の3つはページ内で {{ site.xxx }} として参照しているので、ここを変えれば全ページに反映される。
-title: Fitness サポート
-app_name: Fitness
+title: liftlog サポート
+app_name: liftlog
 developer: phos-001
 contact_form_url: https://docs.google.com/forms/d/e/1FAIpQLSeshDVN-Wa6a8PRzWs-yUAAB4ucyEf7zIXRFGAqAwpudQuQCQ/viewform
 
