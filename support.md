@@ -13,15 +13,15 @@ permalink: /support/
 
 <a class="button" href="{{ site.contact_form_url }}">お問い合わせフォームを開く</a>
 
-</div>
-
-<div class="card note" markdown="1">
+<div class="note" markdown="1">
 
 不具合のご報告の際は、次の情報もあわせてお知らせいただけると調査がスムーズです。
 
 - お使いの iPhone の機種と iOS のバージョン
 - 本アプリのバージョン（設定画面のいちばん下に表示されています）
 - 発生した画面と操作の手順
+
+</div>
 
 </div>
 

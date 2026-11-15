@@ -199,6 +199,10 @@ a { color: var(--brand); }
   font-size: 14px;
 }
 
+/* フォームを開くボタンと同じカードに入れる注意書き。ボタンとの間を少しあける */
+.card .note { margin-top: 20px; }
+.card .note > :last-child { margin-bottom: 0; }
+
 /* よくある質問。設定タブの一覧と同じく、カードの中に区切り線で行を並べ、押すと答えが開く */
 .faq {
   padding: 0;
