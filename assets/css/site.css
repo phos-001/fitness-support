@@ -124,7 +124,7 @@ a { color: var(--brand); }
 .content {
   max-width: 640px;
   margin: 0 auto;
-  padding: 28px 16px 8px;
+  padding: 28px 16px 48px;
 }
 
 .content > h1 {
@@ -258,11 +258,4 @@ a { color: var(--brand); }
   color: var(--text-secondary);
   font-size: 13px;
   text-align: right;
-}
-
-.footer {
-  padding: 24px 16px 40px;
-  color: var(--text-secondary);
-  font-size: 13px;
-  text-align: center;
 }
