@@ -166,6 +166,9 @@ a { color: var(--brand); }
   line-height: 1.4;
 }
 
+/* プライバシーポリシーのように、1枚のカードの中に番号つきの段落を続けて並べるときは、段落の間をあける */
+.card h2:not(:first-child) { margin-top: 32px; }
+
 .card h3 {
   margin: 20px 0 4px;
   font-size: 15px;
