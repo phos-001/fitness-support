@@ -333,38 +333,6 @@ a { color: var(--brand); }
   .device { box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 0 0 2px #48484A; }
 }
 
-/* 冒頭の3台。真ん中のグラフを手前に大きく、左右の記録とタイマーを少し下げて奥に置く */
-.showcase {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 4px 0 8px;
-}
-
-.showcase .device { flex: none; }
-
-.showcase-center {
-  position: relative;
-  z-index: 1;
-  width: min(280px, 52%);
-}
-
-.showcase-side {
-  width: min(240px, 42%);
-  margin-top: 48px;
-  opacity: 0.96;
-}
-
-.showcase-left { margin-right: -12%; transform: rotate(-4deg); }
-.showcase-right { margin-left: -12%; transform: rotate(4deg); }
-
-/* 幅の狭い画面では、左右の2台が画面の端からはみ出さないよう小さくする */
-@media (max-width: 560px) {
-  .showcase-side { width: 33%; margin-top: 32px; }
-  .showcase-left { margin-right: -9%; }
-  .showcase-right { margin-left: -9%; }
-}
-
 /* --- できること --- */
 
 /* 画面と説明を横に並べ、行ごとに左右を入れ替える。幅の狭い画面では説明を上、画面を下に重ねる */
@@ -382,6 +350,9 @@ a { color: var(--brand); }
 }
 
 .feature-row.is-reversed .device { order: 2; }
+
+/* ページのいちばん上の行は、タブとの間を詰める */
+.content--home > .feature-row:first-child { margin-top: 24px; }
 
 .feature-eyebrow {
   margin: 0 0 6px;

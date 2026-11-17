@@ -8,14 +8,8 @@ permalink: /
   画面の画像は、シミュレータで見本の記録を入れて撮ったアプリのスクリーンショット。ライトとダークの両方を用意し、見ている端末の設定に合わせて出す
 {% endcomment %}
 
-<section class="showcase" aria-label="アプリの画面">
-  {% include device.html name="record" alt="筋トレ画面。その日の種目ごとに、重さと回数のセットが並んでいる" class="showcase-side showcase-left" eager=true %}
-  {% include device.html name="graph" alt="グラフ画面。ベンチプレスの最大重量が右肩上がりに伸びている" class="showcase-center" eager=true %}
-  {% include device.html name="timer" alt="タイマー画面。休憩の残り時間が円で表示されている" class="showcase-side showcase-right" eager=true %}
-</section>
-
 <section class="feature-row">
-  {% include device.html name="record" alt="筋トレ画面。ベンチプレスなどの種目ごとに、重さと回数のセットを記録している" %}
+  {% include device.html name="record" alt="筋トレ画面。ベンチプレスなどの種目ごとに、重さと回数のセットを記録している" eager=true %}
   <div class="feature-text">
     <p class="feature-eyebrow">記録する</p>
     <h2>重さと回数を、<br>すばやく残す。</h2>
