@@ -267,7 +267,7 @@ a { color: var(--brand); }
 .hero--home {
   position: relative;
   overflow: hidden;
-  padding: 40px 16px 72px;
+  padding: 40px 16px 56px;
 }
 
 .hero--home::before {
@@ -351,7 +351,7 @@ a { color: var(--brand); }
 
 .feature-row.is-reversed .device { order: 2; }
 
-/* ページのいちばん上の行は、タブとの間を詰める */
+/* ページのいちばん上の行は、グラデーションとの間を詰める */
 .content--home > .feature-row:first-child { margin-top: 24px; }
 
 .feature-eyebrow {

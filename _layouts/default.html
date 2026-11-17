@@ -26,11 +26,16 @@
       <p class="hero-lead">筋トレの記録・グラフでの振り返り・<br>休憩タイマーを、ひとつに。</p>
       {% endif %}
     </header>
-    {% comment %}今開いているページはリンクにせず選んだ見た目にし、どのページにいるかがわかるようにする{% endcomment %}
+    {% comment %}
+      今開いているページはリンクにせず選んだ見た目にし、どのページにいるかがわかるようにする。
+      ホームは上から読んでいく紹介ページで、サポートとプライバシーポリシーへはいちばん下のお問い合わせから案内するため、タブを出さない
+    {% endcomment %}
+    {% unless is_home %}
     <nav class="tabs" aria-label="ページ">
       {% if page.url == '/support/' %}<span class="tab is-current" aria-current="page">サポート</span>{% else %}<a class="tab" href="{{ '/support/' | relative_url }}">サポート</a>{% endif %}
       {% if page.url == '/privacy/' %}<span class="tab is-current" aria-current="page">プライバシーポリシー</span>{% else %}<a class="tab" href="{{ '/privacy/' | relative_url }}">プライバシーポリシー</a>{% endif %}
     </nav>
+    {% endunless %}
     <main class="content{% if is_home %} content--home{% endif %}">
       {{ content }}
     </main>
