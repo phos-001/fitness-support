@@ -4,7 +4,7 @@ permalink: /
 ---
 {% comment %}
   App Store Connect の「マーケティングURL」に入れ、App Store のアプリのページの「デベロッパWebサイト」から開くページ。
-  キャッチコピーは _layouts/default.html のグラデーションの中に出す。App Store のアプリのページから開くため、App Store へのリンクは置かない。
+  キャッチコピーは _layouts/default.html のグラデーションの中に出す。App Store へのリンクは、App Store 以外から来た人のためにいちばん下に1か所だけ置く。
   画面の画像は、シミュレータで見本の記録を入れて撮ったアプリのスクリーンショット。ライトとダークの両方を用意し、見ている端末の設定に合わせて出す
 {% endcomment %}
 
@@ -67,6 +67,19 @@ permalink: /
   <li>トラッキングなし</li>
   <li>アカウント登録不要</li>
 </ul>
+
+{% comment %}
+  App Store 以外（検索や SNS など）から来た人が入手できるよう、App Store へのリンクをいちばん下に1か所だけ置く。
+  バッジは Apple の公式のもの（日本語版）をそのまま使い、ライトでは黒、ダークでは白を出す。Apple の決まりに合わせ、高さは40px以上にし、まわりをあける
+{% endcomment %}
+<p class="app-store">
+  <a href="{{ site.app_store_url }}">
+    <picture>
+      <source srcset="{{ '/assets/images/badges/app-store-ja-white.svg' | relative_url }}" media="(prefers-color-scheme: dark)">
+      <img src="{{ '/assets/images/badges/app-store-ja-black.svg' | relative_url }}" alt="App Store からダウンロード" width="131" height="48">
+    </picture>
+  </a>
+</p>
 
 <section class="card closing">
   <p class="closing-title">お問い合わせ</p>

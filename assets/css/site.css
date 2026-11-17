@@ -267,7 +267,7 @@ a { color: var(--brand); }
 .hero--home {
   position: relative;
   overflow: hidden;
-  padding: 40px 16px 56px;
+  padding: 40px 16px 36px;
 }
 
 .hero--home::before {
@@ -288,6 +288,11 @@ a { color: var(--brand); }
 }
 
 .hero--home .brand-icon::after { inset: 16px 13px; }
+
+/* 行の終わりの「、」「。」は文字の枠の左半分にしか形がなく、右半分が空くため、中央にそろえると左に寄って見える。
+   約物を半分の幅で組む（palt）ことで右の空きをなくし、見た目の中央にそろえる */
+.hero-tagline,
+.hero-lead { font-feature-settings: "palt"; }
 
 .hero-tagline {
   margin: 28px 0 10px;
@@ -560,6 +565,14 @@ a { color: var(--brand); }
   color: var(--brand);
   font-weight: 800;
 }
+
+.app-store {
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.app-store a { display: inline-block; }
+.app-store img { display: block; width: auto; height: 48px; }
 
 .closing {
   padding: 28px 24px;
