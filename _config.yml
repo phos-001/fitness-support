@@ -1,7 +1,6 @@
 # GitHub Pages（Jekyll）の設定。
-# 下の3つはページ内で {{ site.xxx }} として参照しているので、ここを変えれば全ページに反映される。
+# 下の2つはページ内で {{ site.xxx }} として参照しているので、ここを変えれば全ページに反映される。
 app_name: liftlog
-app_store_url: https://apps.apple.com/app/id6835036427
 contact_form_url: https://docs.google.com/forms/d/e/1FAIpQLSeshDVN-Wa6a8PRzWs-yUAAB4ucyEf7zIXRFGAqAwpudQuQCQ/viewform
 
 lang: ja

@@ -14,18 +14,24 @@
     <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
   </head>
   <body>
-    <header class="hero">
+    {% assign is_home = false %}{% if page.url == '/' %}{% assign is_home = true %}{% endif %}
+    <header class="hero{% if is_home %} hero--home{% endif %}">
       <a class="brand" href="{{ '/' | relative_url }}">
         <span class="brand-icon" aria-hidden="true"></span>
         <span class="brand-name">{{ site.app_name }}</span>
       </a>
+      {% comment %}ホームだけ、グラデーションの中にキャッチコピーを出す。App Store のアプリのページから開くページのため、App Store へのリンクは置かない{% endcomment %}
+      {% if is_home %}
+      <p class="hero-tagline">記録するほど、<br>伸びが見える。</p>
+      <p class="hero-lead">筋トレの記録・グラフでの振り返り・<br>休憩タイマーを、ひとつに。</p>
+      {% endif %}
     </header>
     {% comment %}今開いているページはリンクにせず選んだ見た目にし、どのページにいるかがわかるようにする{% endcomment %}
     <nav class="tabs" aria-label="ページ">
       {% if page.url == '/support/' %}<span class="tab is-current" aria-current="page">サポート</span>{% else %}<a class="tab" href="{{ '/support/' | relative_url }}">サポート</a>{% endif %}
       {% if page.url == '/privacy/' %}<span class="tab is-current" aria-current="page">プライバシーポリシー</span>{% else %}<a class="tab" href="{{ '/privacy/' | relative_url }}">プライバシーポリシー</a>{% endif %}
     </nav>
-    <main class="content">
+    <main class="content{% if is_home %} content--home{% endif %}">
       {{ content }}
     </main>
   </body>

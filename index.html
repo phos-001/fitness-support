@@ -1,0 +1,80 @@
+---
+title: ホーム
+permalink: /
+---
+{% comment %}
+  App Store Connect の「マーケティングURL」に入れ、App Store のアプリのページの「デベロッパWebサイト」から開くページ。
+  キャッチコピーは _layouts/default.html のグラデーションの中に出す。App Store のアプリのページから開くため、App Store へのリンクは置かない。
+  画面の画像は、シミュレータで見本の記録を入れて撮ったアプリのスクリーンショット。ライトとダークの両方を用意し、見ている端末の設定に合わせて出す
+{% endcomment %}
+
+<section class="showcase" aria-label="アプリの画面">
+  {% include device.html name="record" alt="筋トレ画面。その日の種目ごとに、重さと回数のセットが並んでいる" class="showcase-side showcase-left" eager=true %}
+  {% include device.html name="graph" alt="グラフ画面。ベンチプレスの最大重量が右肩上がりに伸びている" class="showcase-center" eager=true %}
+  {% include device.html name="timer" alt="タイマー画面。休憩の残り時間が円で表示されている" class="showcase-side showcase-right" eager=true %}
+</section>
+
+<section class="feature-row">
+  {% include device.html name="record" alt="筋トレ画面。ベンチプレスなどの種目ごとに、重さと回数のセットを記録している" %}
+  <div class="feature-text">
+    <p class="feature-eyebrow">記録する</p>
+    <h2>重さと回数を、<br>すばやく残す。</h2>
+    <p>その日の種目と、重さ・回数のセットをすばやく記録。よく行うメニューはテンプレートにして、まとめて呼び出せます。</p>
+    <p class="feature-sub">手書きのメモやスクリーンショットの写真から、記録を読み取って取り込むこともできます。</p>
+  </div>
+</section>
+
+<section class="feature-row is-reversed">
+  {% include device.html name="graph" alt="グラフ画面。ベンチプレスの最大重量の推移を折れ線グラフで表示している" %}
+  <div class="feature-text">
+    <p class="feature-eyebrow">振り返る</p>
+    <h2>伸びが、<br>グラフで見える。</h2>
+    <p>種目ごとの重さと回数の推移をグラフで確認。自己ベストを更新すると、その場でお知らせします。</p>
+    <p class="feature-sub">記録は画像にして、写真に保存したり共有したりできます。</p>
+  </div>
+</section>
+
+<section class="feature-row">
+  {% include device.html name="timer" alt="タイマー画面。休憩の残り時間55秒が円のゲージで表示されている" %}
+  <div class="feature-text">
+    <p class="feature-eyebrow">休憩をはかる</p>
+    <h2>次のセットまで、<br>ひと目でわかる。</h2>
+    <p>セットの合間の休憩時間をタイマーで。アプリを閉じていても、時間になると音と通知でお知らせします。</p>
+  </div>
+</section>
+
+<section class="card sync">
+  <span class="sync-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9H7z"/><path d="M9.5 13.5l2 2 3.5-3.5"/></svg>
+  </span>
+  <div>
+    <h2>iCloud で同期</h2>
+    <p>記録とテンプレートは iCloud で自動で同期。機種変更のときも、同じ記録をそのまま使えます。同期は無料でお使いいただけます。</p>
+  </div>
+</section>
+
+<section class="pro" aria-labelledby="pro-title">
+  <div class="pro-text">
+    <p class="pro-eyebrow">もっと伸ばしたい人に</p>
+    <h2 class="pro-title" id="pro-title">{{ site.app_name }} Pro</h2>
+    <ul class="pro-list">
+      <li><strong>次回の目標の提案</strong><span>これまでの記録から、今回挑戦する重さと回数を提案します</span></li>
+      <li><strong>記録の予測</strong><span>最高記録の伸び方から、目標の重さに届く日を予測します</span></li>
+      <li><strong>詳しい分析</strong><span>部位ごとの頻度と総重量のまとめと、種目ごとの自己ベストの一覧</span></li>
+      <li><strong>ライブアクティビティ</strong><span>休憩タイマーの残り時間を、ロック画面とダイナミックアイランドに表示します</span></li>
+    </ul>
+    <p class="pro-note">月額プランと年額プランがあります。はじめての方は1週間無料でお試しいただけます。</p>
+  </div>
+  {% include device.html name="best" alt="自己ベストの一覧。種目ごとに最大重量と最大1RMが並んでいる" %}
+</section>
+
+<ul class="promises" aria-label="{{ site.app_name }} の約束">
+  <li>広告なし</li>
+  <li>トラッキングなし</li>
+  <li>記録はあなたの iCloud にだけ</li>
+</ul>
+
+<section class="card closing">
+  <p class="closing-title">お問い合わせ</p>
+  <p class="note">{{ site.app_name }} は個人で開発しているアプリです。不具合のご報告やご要望は<a href="{{ '/support/' | relative_url }}">サポート</a>から、情報の取り扱いは<a href="{{ '/privacy/' | relative_url }}">プライバシーポリシー</a>をご覧ください。</p>
+</section>

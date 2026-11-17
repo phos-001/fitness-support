@@ -1,0 +1,11 @@
+{% comment %}
+  アプリのスクリーンショットを iPhone の枠に入れて表示する。
+  include.name: assets/images/screens/ の画像の名前。ダークモードでは「名前-dark.jpg」を出す
+  include.alt: 画像の説明
+{% endcomment %}
+<figure class="device{% if include.class %} {{ include.class }}{% endif %}">
+  <picture>
+    <source srcset="{{ '/assets/images/screens/' | append: include.name | append: '-dark.jpg' | relative_url }}" media="(prefers-color-scheme: dark)">
+    <img src="{{ '/assets/images/screens/' | append: include.name | append: '.jpg' | relative_url }}" alt="{{ include.alt }}" width="600" height="1304"{% if include.eager == nil %} loading="lazy"{% endif %}>
+  </picture>
+</figure>
